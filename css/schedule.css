@@ -1,0 +1,28 @@
+/* Fixing header */
+
+.header .logo {
+    padding: 0 15px;
+}
+
+.header .logo a {
+    font-size: 25px;
+}
+
+.header .logo a span {
+    font-size: 15px;
+    opacity: .9;
+}
+
+
+/* Schedules starts */
+
+.schedule-title {
+    color: var(--write-color);
+    text-align: center;
+}
+
+.schedule-title p {
+    opacity: .8;
+    max-width: 700px;
+    margin: 0 auto;
+}

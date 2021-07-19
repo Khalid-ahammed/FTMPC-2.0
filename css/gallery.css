@@ -1,0 +1,254 @@
+.header .logo {
+    padding: 0 15px;
+}
+
+.header .logo a {
+    font-size: 25px;
+}
+
+.header .logo a span {
+    font-size: 15px;
+    opacity: .9;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    width: 100%;
+}
+
+
+/* Create four equal columns that sits next to each other */
+
+.gallery {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: auto;
+    padding: 45px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-auto-flow: dense!important;
+}
+
+.gallery .image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .9);
+    cursor: pointer;
+}
+
+.image .img-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 1;
+    color: var(--white);
+    transition: .2s all ease-in-out;
+    opacity: 0;
+}
+
+.image:hover .img-icon {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 1;
+}
+
+.image:hover img {
+    filter: brightness(.3) grayscale(.5);
+    transform: scale(1.03);
+}
+
+.gallery .image:first-child {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+.gallery .image:nth-child(2n+3) {
+    grid-row-start: span 2;
+}
+
+.gallery .image:nth-child(4n+5) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+.gallery .image:nth-child(6n+7) {
+    grid-column-start: span 2;
+}
+
+.gallery .image:nth-child(8n+9) {
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: .3s all ease-in-out;
+}
+
+
+/* Previe box design */
+
+.preview-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    max-width: 900px;
+    max-height: 90vh;
+    width: auto;
+    background-color: var(--write-color);
+    padding: 5px 5px 0px 5px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.preview-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+
+.preview-box .image-box {
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.preview-box .main-img {
+    max-width: 890px;
+    margin: auto;
+    width: auto;
+    max-height: 88vh;
+    border-radius: 5px;
+    /* object-fit: fill; */
+}
+
+.image-box .icon {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    background-color: var(--header-color-alpha);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--write-color);
+    transition: .3s ease all;
+    font-size: 25px;
+    color: var(--white);
+    border-radius: 50%;
+}
+
+.image-box .icon:hover {
+    box-shadow: 3px 3px 15px var(--white);
+    background-color: var(--write-color);
+    color: var(--main-color)
+}
+
+.preview-box .slide {
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    top: 50%;
+    font-size: 30px;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 3;
+}
+
+.number-option {
+    font-size: 20px;
+    padding: 10px 30px;
+    position: absolute;
+    bottom: 0;
+    color: var(--write-color);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, .6);
+    box-shadow: 5px 5px 30px black;
+}
+
+.prev {
+    left: 5%;
+    transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+.next {
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.shadow {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(1px);
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media(max-width: 990px) {
+    .preview-box {
+        max-width: 700px;
+    }
+    .preview-box .main-img {
+        max-width: 690px;
+        margin: auto;
+        width: auto;
+    }
+}
+
+@media(max-width: 767px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .preview-box {
+        width: 100%;
+    }
+    .preview-box .main-img {
+        width: 100%;
+    }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media (max-width: 599px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .image img {
+        filter: brightness(1) grayscale(0);
+    }
+}
+
+@media (max-width: 430px) {
+    .gallery {
+        display: block;
+    }
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}

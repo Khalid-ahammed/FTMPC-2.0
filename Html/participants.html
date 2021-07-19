@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/participants.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <title>Participants Registration</title>
+</head>
+
+<body>
+    <!--page loader start-->
+    <div class="page-loader">
+        <div class="loader-container">
+            <div class="as"></div>
+            <div class="as"></div>
+            <div class="as"></div>
+            <div class="as"></div>
+            <div class="as"></div>
+        </div>
+    </div>
+    <!--page loader end-->
+    <div class="main">
+        <div class="upper-arrow">
+            <a href="#"><img src="../images/2arrow1.png" alt="Arrow here"></a>
+        </div>
+        <!-- Header Start -->
+        <header class="header">
+            <div class="container">
+                <div class="header-main">
+                    <div class="logo">
+                        <a href="#">FTMPC 2.0 <span>| participants</span></a>
+                    </div>
+                    <div class="nav-toggler">
+                        <span></span>
+                    </div>
+                    <div class="menu-overlay"></div>
+                    <!-- Navigation bar -->
+                    <nav class="nav-menu">
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="about.html">About FTMPC</a>
+                            </li>
+                            <li class="menu-item menu-item-has-child">
+                                <a href="#" data-toggle="sub-menu">Registration <i class="plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="ca.html">CA</a></li>
+                                    <li class="menu-item"><a href="participants.html" class="activated-item">Participants</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-child">
+                                <a href="#" data-toggle="sub-menu">Events <i class="plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="setters.html">Setters List</a></li>
+                                    <li class="menu-item"><a href="schedule.html">Schedules</a></li>
+                                    <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Navigation bar ends -->
+                </div>
+            </div>
+        </header>
+        <!-- Header ends -->
+        <!-- Registration form -->
+        <div class="regi-form">
+            <div class="page-bg"></div>
+            <div class="about-title page-title" data-aos="fade-right" data-aos-duration="1500">
+                <div class="title">
+                    <h1>Participant Registration</h1>
+                </div>
+            </div>
+
+            <!-- Mian form starts -->
+            <div class="main-form" data-aos="fade-up" data-aos-duration="1500">
+                <form id="form" name="myForm" action="exmaple.php" method="POST" onsubmit=" return(validateform());">
+                    <div class=" field name ">
+                        <label for="name ">Student's Name <span >*</span></label>
+                        <div class="input_box">
+                            <i class="fas fa-user "></i>
+                            <input id="fname" type="text" name="fname" placeholder="Abdul Karim " required autocomplete="off" class="input ">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="field dob ">
+                        <label for="name ">Date Of Birth <span >*</span></label>
+                        <div class="input_box ">
+                            <i class="fas fa-user "></i>
+                            <input class="input " type="date" name="date_birth " id="fdate " min="1920-01-01" max="2020-12-31" required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="field address ">
+                        <label for="name ">Address <span >*</span></label>
+                        <div class="input_box ">
+                            <i class="fas fa-phone-alt "></i>
+                            <input class="input " type="text" name="address " id=" " placeholder="3/D,Motijhil,Dhaka-1000 " required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="field fb_id ">
+                        <label for="facebook ">Facebook - ID <span >*</span></label>
+                        <div class="input_box ">
+                            <i class="fab fa-facebook-square "></i>
+                            <input class="input " type="url" name="fb_id " id="fb_id " placeholder="copy URL from Facebook " required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="field sch_clg_name ">
+                        <label for="name ">School/College <span >*</span></label>
+                        <div class="input_box ">
+                            <i class="fas fa-school "></i>
+                            <input class="input " type="text" name=" " id="clgName " placeholder="Your College Name " required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="field class ">
+                        <label for="class ">Class <span >*</span></label>
+                        <div class="input_box ">
+                            <i class="fas fa-list-ul "></i>
+                            <select class="input " name="class ">
+                                <option value="9 ">9</option>
+                                <option value="10 ">10</option>
+                                <option value="11 ">11</option>
+                                <option value="12 ">12</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field femail ">
+                        <label for="email ">E-mail <span >*</span></label>
+                        <div class="input_box">
+                            <i class="fas fa-envelope "></i>
+                            <input type="email" name="EMail " id="email" placeholder="example@email.com " required autocomplete="off" class="input ">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="field phone ">
+                        <label for="cell_num ">Contact No. <span >*</span></label>
+                        <div class="input_box ">
+                            <i class="fas fa-phone-alt "></i>
+                            <input type="number" name="number " id="fnum" placeholder="01XXXXXXXXX " spellcheck="true " required autocomplete="off" class="input " min="0" pattern="[0-9]{11}">
+                            <p></p>
+                        </div>
+                    </div>
+                    <hr class="last ">
+                    <div class="button ">
+                        <button type="submit" class=" submit ">Submit <i class="fa fa-paper-plane "></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="form-footer row" data-aos="zoom-in" data-aos-duration="1000">
+                <h2>Facing Problems? Check for Solutions</h2>
+                <a href="faq.html" class="btn">FAQ</a>
+            </div>
+        </div>
+        <!-- Ragistration form ends -->
+        <!-- Footer starts -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="logo sub-footer">
+                        <a href="https://nditc.org/" target="_blank"><img src="../images/nditc.png" alt="nditc logo here"></a>
+                        <p>Lorem ipsum dolor, sit amet elit. Eum ratione ipsum quos beatae aliquid repellat, quo odit dicta libero soluta.</p>
+                    </div>
+
+                    <div class="quick-links sub-footer">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="participants.html">Registration</a></li>
+                            <li><a href="about.html">FTMPC</a></li>
+                            <li><a href="schedule.html">Schedules</a></li>
+                            <li><a href="setters.html">Setters list</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="connect sub-footer">
+                        <h3>Connect with Us</h3>
+                        <div class="connect-desc">
+                            <p>Email: example@gmail.com</p>
+                            <p>Phone: 017********</p>
+                            <p>Lorem ipsum dolor </p>
+                        </div>
+                    </div>
+                    <div class="description social-links sub-footer">
+                        <h3>Follow us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-youtube-square"></i></a>
+                            <a href="#"><i class="fab fa-instagram-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row privacy">
+                    <div class="privacy-policy">
+                        <p>&copy;2021 Notre Dame Information Technology Club. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer ends -->
+    </div>
+    <script>
+        document.addEventListener("click", (e) => {
+            if (e.target.classList.contains("input")) {
+                const par = e.target.parentElement;
+                e.target.addEventListener("keypress", (event) => {
+                    const text = event.key;
+                    if (text != null) {
+                        par.classList.add("active");
+                    }
+                })
+            }
+        });
+    </script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/form.js "></script>
+    <script src="../app.js "></script>
+
+</body>
+
+</html>

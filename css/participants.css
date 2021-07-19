@@ -1,0 +1,242 @@
+                                                .header .logo {
+                                                    padding: 0 15px;
+                                                }
+                                                
+                                                .header .logo a {
+                                                    font-size: 25px;
+                                                }
+                                                
+                                                .header .logo a span {
+                                                    font-size: 15px;
+                                                    opacity: .9;
+                                                }
+                                                /* Registration #form starts */
+                                                
+                                                .regi-form {
+                                                    min-height: 100vh;
+                                                    height: auto;
+                                                }
+                                                
+                                                .main-form {
+                                                    min-height: 100%;
+                                                }
+                                                
+                                                #form {
+                                                    max-width: 98vmin;
+                                                    width: 100%;
+                                                    height: auto;
+                                                    margin: 0 auto;
+                                                    padding: 20px 0;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    border-top: 4px solid var(--white);
+                                                    /* box-shadow: 0 0 15px -1px var(--write-color); */
+                                                    background: var(--main-color-alpha);
+                                                    border-radius: 10px;
+                                                }
+                                                
+                                                #form .field {
+                                                    width: 80%;
+                                                    margin: 20px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    flex-direction: row;
+                                                    user-select: none;
+                                                }
+                                                
+                                                #form label {
+                                                    width: 40%;
+                                                    color: var(--para-color);
+                                                    margin-bottom: 5px;
+                                                    text-align: end;
+                                                }
+                                                
+                                                #form label span {
+                                                    margin-top: -5px;
+                                                    color: var(--white);
+                                                }
+                                                
+                                                #form .input_box {
+                                                    display: inline-flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    width: 70%;
+                                                    margin-left: 15px;
+                                                    background-color: #eee1;
+                                                    border-radius: 3px;
+                                                    opacity: .8;
+                                                    padding-right: 5px;
+                                                    position: relative;
+                                                    transition: ease-in-out all .3s;
+                                                }
+                                                
+                                                #form .input_box p {
+                                                    position: absolute;
+                                                    font-size: 11px;
+                                                    color: var(--write-color);
+                                                    top: 106%;
+                                                    left: 5%;
+                                                    visibility: visible;
+                                                }
+                                                
+                                                #form .input_box.active {
+                                                    border: 1px solid var(--white);
+                                                    box-shadow: 0 0 10px -1px var(--write-color);
+                                                }
+                                                
+                                                #form .class .input_box,
+                                                #form .dob .input_box {
+                                                    border: 1px solid var(--white);
+                                                    box-shadow: 0 0 5px -1px var(--write-color);
+                                                }
+                                                
+                                                #form .input_box.active i {
+                                                    transform: translateX(0px);
+                                                }
+                                                
+                                                .input_box i {
+                                                    background-color: none;
+                                                    color: var(--write-color);
+                                                    height: fit-content;
+                                                    width: fit-content;
+                                                    padding: 4.5%;
+                                                    transform: translateX(20px);
+                                                    border-radius: 4.25px;
+                                                    transition: .3s ease all;
+                                                }
+                                                
+                                                #form input::placeholder {
+                                                    color: var(--para-color);
+                                                    opacity: .3;
+                                                    font-size: 13px;
+                                                }
+                                                
+                                                #form input,
+                                                #form select {
+                                                    font-size: 15px;
+                                                    letter-spacing: .7px;
+                                                    background: transparent;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    padding: 2% 5%;
+                                                    color: var(--para-color);
+                                                    opacity: .9;
+                                                    border: none;
+                                                    text-align: left;
+                                                    transition: all 300ms ease-out;
+                                                }
+                                                
+                                                #form select option {
+                                                    color: var(--write-color);
+                                                    background-color: rgba(19, 40, 65, 0.7);
+                                                }
+                                                
+                                                #form input:focus,
+                                                #form select:focus {
+                                                    outline: none;
+                                                    border-radius: 5px;
+                                                    background: rgba(19, 19, 16, 0.06);
+                                                }
+                                                
+                                                #form input::-webkit-outer-spin-button,
+                                                #form input::-webkit-inner-spin-button {
+                                                    -webkit-appearance: none;
+                                                    margin: 0;
+                                                }
+                                                
+                                                #fdate {
+                                                    color: var(--white);
+                                                }
+                                                
+                                                #form hr {
+                                                    width: 85%;
+                                                    height: 2px;
+                                                    border: none;
+                                                    margin: 0 auto;
+                                                    margin-top: 20px;
+                                                }
+                                                
+                                                #form hr.last {
+                                                    background: var(--write-color);
+                                                }
+                                                
+                                                .button {
+                                                    margin: 0 auto;
+                                                    margin-top: 20px;
+                                                    width: 60%;
+                                                    display: flex;
+                                                    justify-content: flex-end;
+                                                }
+                                                
+                                                .button button {
+                                                    border: none;
+                                                    padding: 15px 30px;
+                                                    border-radius: 100px;
+                                                    color: var(--white);
+                                                    font-weight: bold;
+                                                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                                    transition: all 200ms cubic-bezier(0.875, 0.45, 0.4, 0.99);
+                                                    background: var(--header-color-alpha);
+                                                }
+                                                
+                                                .button button:hover {
+                                                    box-shadow: 0 0 6px 0.6px #19a3fa;
+                                                    cursor: pointer;
+                                                    background: var(--white);
+                                                    color: var(--main-color);
+                                                    text-shadow: 0 0 2px #2249aa99;
+                                                }
+                                                
+                                                .form-footer {
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    text-align: center;
+                                                    margin-top: 80px;
+                                                }
+                                                
+                                                .form-footer h2 {
+                                                    color: var(--white);
+                                                    font-size: 16px;
+                                                }
+                                                
+                                                .form-footer .btn {
+                                                    padding: 5px 13px;
+                                                    font-size: 16px;
+                                                    opacity: .8;
+                                                    margin-left: 20px;
+                                                }
+                                                
+                                                @media(max-width: 767px) {
+                                                    .main-form {
+                                                        padding: 0 15px;
+                                                    }
+                                                    #form input {
+                                                        letter-spacing: .8px;
+                                                    }
+                                                }
+                                                
+                                                @media (max-width: 599px) {
+                                                    #form .field {
+                                                        width: 90%;
+                                                        flex-direction: column;
+                                                    }
+                                                    #form .input_box {
+                                                        justify-content: flex-start;
+                                                        width: 80%;
+                                                    }
+                                                    #form label {
+                                                        width: 75%;
+                                                        text-align: left;
+                                                        font-size: 14px;
+                                                    }
+                                                    #form input {
+                                                        font-size: 15px;
+                                                    }
+                                                }
+                                                
+                                                @media (max-height:500px) {
+                                                    #form {
+                                                        min-width: 90vw;
+                                                        width: auto;
+                                                    }
+                                                }

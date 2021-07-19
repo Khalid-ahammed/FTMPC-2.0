@@ -1,0 +1,127 @@
+.header .logo {
+    padding: 0 15px;
+}
+
+.header .logo a {
+    font-size: 25px;
+}
+
+.header .logo a span {
+    font-size: 15px;
+    opacity: .9;
+}
+
+.container,
+.row,
+.menu {
+    margin: 0;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+
+/* Faq section */
+
+.faq-main {
+    min-height: 80vh;
+}
+
+.ques-box {
+    color: var(--para-color);
+    width: 80%;
+    margin: auto;
+}
+
+.ques-item {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.ques-item .ques-main .btn-ic {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%;
+    transform: rotate(0deg);
+    transition: .3s ease all;
+    color: var(--white);
+}
+
+.ques-item .ques-main.inactive .btn-ic {
+    transform: rotate(0deg)!important;
+}
+
+.ques-item .ques-main.active .btn-ic {
+    transform: rotate(-90deg);
+}
+
+.ques-item button {
+    border: none;
+    background: transparent;
+    color: var(--write-color);
+    font-size: 1.5rem;
+    background-color: var(--header-color-alpha);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    transition: all .3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ques-item button:hover {
+    color: var(--white);
+    background-color: rgba(7, 25, 34, .9);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--white);
+    transition: .3s all ease;
+    transform: scale(0);
+}
+
+.ques-item button:focus {
+    background-color: var(--header-color-alpha);
+    border-radius: 0;
+}
+
+.ques-item button:focus::before {
+    transform: scale(1);
+}
+
+.collapse {
+    background-color: rgb(7, 25, 34);
+    position: relative;
+    border-radius: 0 0 15px 15px;
+    transition: .1s ease all;
+    transform: translateY(-10px);
+    opacity: .7;
+}
+
+.collapsing {
+    transform: translateY(-10px);
+    opacity: .7;
+    background-color: rgb(7, 25, 34);
+}
+
+
+/* faq section ends */
+
+.footer {
+    margin-top: 40px;
+}

@@ -1,0 +1,425 @@
+.header .logo {
+    padding: 0 15px;
+}
+
+.header .logo a {
+    font-size: 25px;
+}
+
+.header .logo a span {
+    font-size: 15px;
+    opacity: .9;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* Contact section */
+
+
+/* Contact form */
+
+html {
+    overflow-x: hidden;
+}
+
+.contact-form {
+    max-width: 530px;
+    min-height: 440px;
+    background-color: var(--header-color-alpha);
+    border: 1px solid var(--white);
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.contact-form .form-head {
+    color: var(--write-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.contact-form form {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    position: relative;
+    padding-bottom: 0;
+    flex-direction: column;
+}
+
+.contact-form form .left-form,
+.contact-form form .right-form,
+.contact-form form .lower-field {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.contact-form form label {
+    font-size: 14px;
+    position: absolute;
+    line-height: 40px;
+    pointer-events: none;
+    transition: .3s ease all;
+    display: block;
+    top: 0;
+    left: 0;
+    color: var(--white);
+}
+
+form .field {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 55px;
+}
+
+.field p {
+    font-size: 10px;
+    color: var(--write-color);
+    position: absolute;
+    left: 0%;
+    top: 102%;
+}
+
+.contact-form form .text-area {
+    height: 80px;
+    padding: 10px 0;
+    padding-left: 10px;
+    width: 50%;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+    border: none;
+    outline: none;
+    color: var(--para-color);
+    padding: 5px;
+    font-size: 15px;
+    letter-spacing: .8px;
+    transition: transform .3s ease;
+}
+
+.contact-form form .field input:focus+label,
+.contact-form form .field input:valid+label {
+    top: -30px;
+}
+
+.contact-form form .field .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border: 1px solid var(--white);
+    transition: .3s ease all;
+    pointer-events: none;
+    border-radius: 2px;
+}
+
+.contact-form form .field input:focus~.line,
+.contact-form form .field input:valid~.line {
+    height: 90%;
+    box-shadow: 0 0 5px -1px var(--write-color);
+}
+
+.contact-form form textarea {
+    resize: none;
+    height: 100%;
+    letter-spacing: -.2px;
+    padding: 5px;
+}
+
+.contact-form form .field textarea:focus+label,
+.contact-form form .field textarea:valid+label {
+    top: -20px!important;
+}
+
+.contact-form form .field textarea:focus~.line,
+.contact-form form .field textarea:valid~.line {
+    height: 100%;
+    transform: translateY(10px);
+    box-shadow: 0 0 5px -1px var(--write-color);
+}
+
+.text-area label {
+    left: 10px!important;
+}
+
+.contact-form form .form-send {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-form form .form-send .submit {
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid var(--white);
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    transform: translateY(20px);
+    transition: .3s ease all;
+}
+
+.contact-form form .form-send .submit:hover {
+    color: var(--para-color);
+    border: 1px solid var(--para-color);
+}
+
+.contact-form form .form-send .submit i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* Contact body starts */
+
+.contact-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3% 2%;
+}
+
+.contact-body .contact-row {
+    margin-top: 80px;
+}
+
+.contact-body .sub-contact {
+    width: 50%;
+    color: var(--para-color);
+}
+
+.contact-body .contact-info .subInfo {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.contact-body .contact-info {
+    padding-top: 30px;
+}
+
+.contact-body .contact-info .subInfo .info-icon {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.contact-body .contact-info .subInfo .info-icon i {
+    font-size: 1.5rem;
+    color: var(--write-color);
+    opacity: .8;
+}
+
+.contact-body .contact-info .subInfo p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.social-links h3 {
+    opacity: 1;
+    font-weight: 600;
+}
+
+.contact-body .subInfo a {
+    color: var(--white);
+    font-size: 14px;
+    transition: .2s ease all;
+}
+
+.contact-body .subInfo a:hover {
+    text-decoration: underline;
+}
+
+.web-links a {
+    text-transform: lowercase;
+}
+
+
+/* Designing Location */
+
+.contact-body .location {
+    padding: 10px 5px;
+    position: relative;
+}
+
+.contact-body .location .location-info {
+    font-size: 14px;
+    padding: 5px;
+    color: var(--para-color);
+    font-weight: 500;
+    position: relative;
+    padding-top: 30px;
+    margin: 0 0 20px 20px;
+}
+
+.contact-body .location .location-info .location-icon {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--write-color);
+    color: var(--write-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    opacity: .8;
+    transform: translate(-50%, -50%);
+}
+
+.contact-body .location .location-info .location-icon i {
+    font-size: 25px;
+}
+
+.location-map iframe {
+    max-height: 300px;
+    max-width: 400px;
+}
+
+
+/* Last row faq*/
+
+.contact-faq {
+    margin-top: 50px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.contact-faq h3 {
+    font-weight: 600;
+    color: var(--para-color);
+    display: flex;
+    align-items: center;
+}
+
+.contact-faq a {
+    margin-left: 20px;
+    font-weight: 600;
+    padding: 4px 10px;
+    font-size: 20px;
+}
+
+.contact-faq a:hover {
+    box-shadow: 0 0 5px var(--white)!important;
+}
+
+
+/* media queries */
+
+@media(max-width:991px) {
+    .contact-body .contact-info .subInfo {
+        width: 85%;
+    }
+    .location-map iframe {
+        max-height: 250px;
+        max-width: 350px;
+    }
+}
+
+@media(max-width:767px) {
+    .contact-body .contact-info .subInfo {
+        width: 100%;
+    }
+    .location-map iframe {
+        max-height: 200px;
+        max-width: 290px;
+    }
+    /* .contact-form {} */
+}
+
+@media(max-width:599px) {
+    .location-map iframe {
+        max-height: 200px;
+        max-width: 290px;
+    }
+    /* Contact form */
+    .contact-form {
+        max-width: 85%;
+        min-height: 650px;
+    }
+    .contact-form form .upper-field {
+        margin-top: 10px;
+    }
+    .contact-form form .field {
+        margin-top: 5px;
+    }
+    .contact-form form .left-form,
+    .contact-form form .right-form {
+        width: 80%;
+        padding: 0 10px;
+    }
+    .contact-form form .text-area {
+        width: 60%;
+    }
+    /* Contact form ends */
+    .contact-body .sub-contact {
+        width: 100%;
+    }
+    .contact-body .contact-info .subInfo {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-body .contact-info .subInfo i {
+        margin-bottom: 5px;
+    }
+    /* Location */
+    .location {
+        margin-top: 40px;
+    }
+    .location-info {
+        margin-left: 0!important;
+        text-align: center;
+    }
+    .contact-body .location .location-info .location-icon {
+        left: 50%;
+    }
+    .location-map {
+        text-align: center;
+    }
+    .location iframe {
+        max-width: 90%;
+        max-height: 300px;
+    }
+}
