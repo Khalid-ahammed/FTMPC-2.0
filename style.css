@@ -1671,6 +1671,9 @@ box-shadow: inset -2px -2px 4px rgba(43, 93, 126, 0.99), inset 2px 2px 4px rgba(
     .home-section .container {
         margin-top: 50px;
     }
+    .header .nav-menu {
+        overflow-y: auto;
+    }
 }
 
 
