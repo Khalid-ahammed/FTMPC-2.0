@@ -1652,18 +1652,19 @@ box-shadow: inset -2px -2px 4px rgba(43, 93, 126, 0.99), inset 2px 2px 4px rgba(
 }
 
 @media(max-width:430px) {
+    .home-title p {
+        padding: 1px;
+        font-size: 15px;
+    }
+}
+@media(max-width:399px) {
     .home-section {
         min-height: 120vh;
     }
     .home-section .container {
         margin-top: 30px;
     }
-    .home-title p {
-        padding: 1px;
-        font-size: 15px;
-    }
 }
-
 @media (max-height:499px) {
     .home-section {
         min-height: 170vh;
