@@ -1666,12 +1666,13 @@ box-shadow: inset -2px -2px 4px rgba(43, 93, 126, 0.99), inset 2px 2px 4px rgba(
 
 @media (max-height:499px) {
     .home-section {
-        min-height: 150vh;
+        min-height: 170vh;
     }
     .home-section .container {
-        margin-top: 100px;
+        margin-top: 50px;
     }
 }
+
 
 /*-------------------
  Page Loader 
