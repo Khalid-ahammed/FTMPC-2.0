@@ -214,17 +214,17 @@
         <!-- Footer ends -->
     </div>
     <script>
-        document.addEventListener("click", (e) => {
+        document.onclick = function(e) {
             if (e.target.classList.contains("input")) {
                 const par = e.target.parentElement;
-                e.target.addEventListener("keypress", (event) => {
+                e.target.onkeydown = function(event) {
                     const text = event.key;
                     if (text != null) {
                         par.classList.add("active");
                     }
-                })
+                }
             }
-        });
+        };
     </script>
     <script src="../js/aos.js"></script>
     <script src="../js/form.js "></script>
