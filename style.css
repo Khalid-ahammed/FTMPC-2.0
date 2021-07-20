@@ -623,7 +623,8 @@ button {
 }
 
 .home-section .container {
-    height: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh;
     max-width: 100%;
     margin: 0 auto;
     display: flex;
@@ -638,12 +639,16 @@ button {
 
 .home-section .container .register-btn {
     z-index: 5;
-    height: 55px;
-    width: 200px;
+    min-height: 55px;
+    height: auto;
+    min-width: 200px;
+    width: auto;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: .3s ease all;
 }
 
 .home-section .container .register-btn:hover {
@@ -743,8 +748,8 @@ button {
 /* Home extended */
 
 .video {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     position: fixed;
     z-index: 1000;
     background-color: var(--main-color-alpha);
@@ -767,12 +772,13 @@ button {
     width: 50px;
     transition-duration: .2s;
     z-index: 1000;
+    opacity: .7;
 }
 
 @media (max-width:1000px) {
     .video button {
         top: 10%;
-        right: 3%;
+        right: 2%;
     }
 }
 
@@ -787,7 +793,7 @@ button {
 }
 
 .video .video-container {
-    max-width: 100%;
+    max-width: 100vw;
     background-color: var(--main-color);
 }
 
@@ -876,7 +882,8 @@ button {
 .community {
     width: 95%;
     display: flex;
-    margin: 30px 0;
+    margin: 30px auto;
+    overflow-x: hidden;
 }
 
 .community .side-pic {
@@ -951,6 +958,7 @@ button {
 
 .date-box {
     width: 100%;
+    overflow:hidden;
 }
 
 .date-box .dates {
@@ -1644,12 +1652,26 @@ box-shadow: inset -2px -2px 4px rgba(43, 93, 126, 0.99), inset 2px 2px 4px rgba(
 }
 
 @media(max-width:430px) {
+    .home-section {
+        min-height: 120vh;
+    }
+    .home-section .container {
+        margin-top: 30px;
+    }
     .home-title p {
         padding: 1px;
         font-size: 15px;
     }
 }
 
+@media (max-height:499px) {
+    .home-section {
+        min-height: 150vh;
+    }
+    .home-section .container {
+        margin-top: 100px;
+    }
+}
 
 /*-------------------
  Page Loader 
@@ -1665,7 +1687,7 @@ box-shadow: inset -2px -2px 4px rgba(43, 93, 126, 0.99), inset 2px 2px 4px rgba(
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/body.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/body.jpg);
     background-repeat: none;
     background-size: cover;
 }
