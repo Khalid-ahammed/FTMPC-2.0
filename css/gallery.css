@@ -242,7 +242,7 @@
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 400px) {
     .gallery {
         display: block;
     }
