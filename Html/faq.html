@@ -229,19 +229,21 @@
         <!-- Footer ends -->
     </div>
     <script>
-        const mainFaq = document.querySelector(".main-faq");
-        document.addEventListener("click", (e) => {
-            if (e.target.classList.contains("ques-main")) {
-                if (e.target.classList.contains("active")) collapse();
-                else {
-                    if (mainFaq.querySelector(".active")) collapse();
-                    e.target.classList.add("active");
+        window.onload = () => {
+            const mainFaq = document.querySelector(".main-faq");
+            document.onclick = (e) => {
+                if (e.target.classList.contains("ques-main")) {
+                    if (e.target.classList.contains("active")) collapse();
+                    else {
+                        if (mainFaq.querySelector(".active")) collapse();
+                        e.target.classList.add("active");
+                    }
                 }
-            }
-        });
+            };
 
-        function collapse() {
-            mainFaq.querySelector(".ques-main.active").classList.remove("active");
+            function collapse() {
+                mainFaq.querySelector(".ques-main.active").classList.remove("active");
+            }
         }
     </script>
     <script src="../js/aos.js"></script>
