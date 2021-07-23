@@ -304,7 +304,15 @@ button {
     box-shadow: -3px 3px 18px var(--write-color);
     color: #0ff;
 }
-
+input,
+textarea,
+button,
+select,
+a,
+i {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)!important;
+    user-select: none!important;
+}
 
 /* Header Section */
 
